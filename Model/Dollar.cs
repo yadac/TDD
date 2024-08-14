@@ -12,13 +12,16 @@ namespace TDD.Model
         public int Amount
         {
             get { return _amount; }
+            set { _amount = value; }
         }
 
         public Dollar(int amount)
         {
+            Amount = amount;
         }
-        public void Times(int multiplier)
+        public Dollar Times(int multiplier)
         {
+            return new Dollar(Amount * multiplier);
         }
     }
 }
