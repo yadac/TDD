@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace TDD.Model
 {
-    public class Dollar
+    public class Dollar : Money
     {
-        private int _amount;
-
         public Dollar(int amount)
         {
             _amount = amount;
@@ -17,11 +15,6 @@ namespace TDD.Model
         public Dollar Times(int multiplier)
         {
             return new Dollar(_amount * multiplier);
-        }
-        public override bool Equals(object? obj)
-        {
-            if (obj == null) return false;
-            return _amount == ((Dollar)obj)._amount;
         }
     }
 }

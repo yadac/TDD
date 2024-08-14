@@ -15,11 +15,10 @@ namespace TDD.Tests
         [TestMethod]
         public void TestEquality()
         {
-            Dollar one = new Dollar(5);
-            Dollar two = new Dollar(5);
-            Dollar three = new Dollar(6);
-            Assert.IsTrue(one.Equals(two));
-            Assert.IsFalse(one.Equals(three));
+            Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
+            Assert.IsTrue(new Franc(5).Equals(new Franc(5)));
+            Assert.IsFalse(new Franc(5).Equals(new Franc(6)));
         }
         [TestMethod]
         public void TestFrancMultiplication()
